@@ -1,5 +1,6 @@
-# compile-times-swift
 Tips for reducing compile times in Swift
+
+See https://github.com/madhikarma/ios-resources to links with more info
 
 ## Project settings
 - Disable dSYM files being being generated for Debug builds.
@@ -18,4 +19,4 @@ Tips for reducing compile times in Swift
 - DRY up code
 - Beware of generics and lazy closures
 
-See https://github.com/madhikarma/ios-resources to links with more info
+
