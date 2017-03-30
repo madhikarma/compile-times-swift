@@ -17,3 +17,5 @@ Tips for reducing compile times in Swift
 - Remove nil coalesciping operator usage e.g. `someOptional ?? 1 : 0`
 - DRY up code
 - Beware of generics and lazy closures
+
+See https://github.com/madhikarma/ios-resources to links with more info
