@@ -12,6 +12,7 @@ See https://github.com/madhikarma/ios-resources to links with more info
 
 ## Code
 - Add `final`, `fileprivate` and `private` to classes and methods respectively
+- Add type info (avoid type inferene) to certain types like Dictionaries e.g. `[String: Any]`
 - Use `fus` tool to find unused code
 - Use Build Time Analyzer to profile functions that take long to compile (and optimize them)
 - Beware of generics and lazy closures
