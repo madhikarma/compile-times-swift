@@ -3,7 +3,7 @@ Tips for reducing compile times in Swift
 
 ## Project settings
 - Disable dSYM files being being generated for Debug builds.
-- Set Whole Module Optimisation on but disable the optimisations even for Debug builds (to compile all code as if it were one file which is faster than individual file dependency analysis)
+- Set Whole Module Optimisation on but disable the optimisations even for Debug builds (to compile all code as if it were one file which is faster than individual file dependency analysis). Big improvement(~30% -50% faster) compile times)
 
 # Project setup
 - Consider using frameworks and modules
