@@ -7,7 +7,7 @@ Note. your project's results may be different, be sure to profile and check if i
 `defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES`
 
 ## Project settings
-- Disable dwarf dSYM files being being generated for Debug builds.
+- Disable dwarf dSYM files being being generated for Debug builds http://holko.pl/2016/10/18/dsym-debug/
 - Make sure that "Whole Module Optimisation" is switched in your build configurations but disable the optimisations part for Debug builds by adding "-O none" to Other Swift Flags. This will enable WMO - making all the code compile if it were one file - but skip the optimisations bit for Debug builds. Big improvement (~30% -50% faster) compile times but builds will have less log output per file compiling as essentially the whole module is compiling. Alternatively add the legacy "SWIFT_WHOLE_MODULE_OPTIMIZATION" as a user defined setting but note. Xcode will warn that it's deprecated as WMO is now the default. http://roadfiresoftware.com/2017/01/improving-swift-compile-times/
 
 # Project setup
