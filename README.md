@@ -8,7 +8,7 @@ Note. your project's results may be different, be sure to profile and check if i
 
 ## Project settings
 - Disable dwarf dSYM files being being generated for Debug builds.
-- Set Whole Module Optimisation on but disable the optimisations even for Debug builds (to compile all code as if it were one file which is faster than individual file dependency analysis). Big improvement (~30% -50% faster) compile times but will have less log output.
+- Make sure that "Whole Module Optimisation" is switched in your build configurations but disable the optimisations part for Debug builds by adding "-O none" to Other Swift Flags. This will enable WMO - making all the code compile if it were one file - but skip the optimisations bit for Debug builds. Big improvement (~30% -50% faster) compile times but builds will have less log output per file compiling as essentially the whole module is compiling. Alternatively add the legacy "SWIFT_WHOLE_MODULE_OPTIMIZATION" as a user defined setting but note. Xcode will warn that it's deprecated as WMO is now the default. 
 
 # Project setup
 - Consider using modules so the compiler can check dependencies across sections of the app. (thought could modules be used like Java packages?)
