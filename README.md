@@ -9,6 +9,7 @@ Note. your project's results may be different, be sure to profile and check if i
 ## Project settings
 - Disable dwarf dSYM files being being generated for Debug builds http://holko.pl/2016/10/18/dsym-debug/
 - Make sure that "Whole Module Optimisation" is switched in your build configurations but disable the optimisations part for Debug builds by adding "-O none" to Other Swift Flags. This will enable WMO - making all the code compile if it were one file - but skip the optimisations bit for Debug builds. Big improvement (~30% -50% faster) compile times but builds will have less log output per file compiling as essentially the whole module is compiling. Alternatively add the legacy "SWIFT_WHOLE_MODULE_OPTIMIZATION" as a user defined setting but note. Xcode will warn that it's deprecated as WMO is now the default. http://roadfiresoftware.com/2017/01/improving-swift-compile-times/
+- Tweak Xcode GUI and / or xcodebuild (CLI) compiler settings of build processes and subtasks https://gist.github.com/nlutsenko/ee245fbd239087d22137
 
 # Project setup
 - Consider using modules so the compiler can check dependencies across sections of the app. (thought could modules be used like Java packages?)
@@ -27,3 +28,6 @@ Note. your project's results may be different, be sure to profile and check if i
 - DRY up code where possible
 - Look at your dependencies and move into frameworks if possible
 
+## Relevant links
+
+https://www.linkedin.com/pulse/best-hardware-build-swift-what-you-might-think-jacek-suliga
